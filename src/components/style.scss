@@ -7,20 +7,28 @@
 }
 
 .react-tabs {
+  >.hd{
+    position: relative;
+    >.bar{
+      height: 3px;
+      background: #F00;
+      position: absolute;
+      transition: left 0.5s cubic-bezier(0.42, 0, 0.58, 1.0);
+      bottom:0;
+    }
+  }
+
   &-menu {
-    display: table;
     width: 100%;
     @extend .clearfix;
 
     &-item {
-      display: table-cell;
+      float: left;
       padding: 10px 0;
       text-align: center;
       background: #eee;
-      border-bottom: 3px solid transparent;
 
       &.tab-active {
-        border-bottom-color: #F00;
       }
     }
   }
