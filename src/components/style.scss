@@ -13,7 +13,7 @@
       height: 3px;
       background: #F00;
       position: absolute;
-      transition: left 0.5s cubic-bezier(0.42, 0, 0.58, 1.0);
+      transition: left 0.3s cubic-bezier(0.42, 0, 0.58, 1.0);
       bottom:0;
     }
   }
@@ -29,6 +29,7 @@
       background: #eee;
 
       &.tab-active {
+        color:#F00;
       }
     }
   }

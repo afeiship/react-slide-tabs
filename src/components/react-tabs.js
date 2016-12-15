@@ -75,7 +75,11 @@ export default class extends React.Component{
         <div className="hd">
           <ul className="react-tabs-menu">
             {React.Children.map(this.props.children, (element, index) => {
-              return (<li style={{width:`${100/this.props.children.length}%`}} key={index} className={classNames('react-tabs-menu-item',{'tab-active':this.state.activeIndex == index})} onClick={() => {this.setState({activeIndex: index})}}>{element.props.menu}</li>)
+              return (<li
+                style={{width:`${100/this.props.children.length}%`}}
+                key={index}
+                className={classNames('react-tabs-menu-item',{'tab-active':this.state.activeIndex == index})}
+                onClick={() => {this.toIndex(index);}}>{element.props.menu}</li>)
             })}
           </ul>
           <div
