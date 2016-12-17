@@ -1,18 +1,37 @@
 import './style.scss';
 import classNames from 'classnames';
 import Swipeable from 'react-swipeable';
-import {ReactSwipeViews} from 'react-swipe-views';
+import SwipeableViews from 'react-swipeable-views';
 
-export default class extends ReactSwipeViews{
 
-  constructor(props) {
-    super(props);
+export default class extends SwipeableViews{
 
+  constructor(props){
+  	super(props);
+    this._index = props.activeIndex;
     this._length = props.children.length;
     this._boundary = {
       min: 0,
       max: this._length - 1
     };
+    console.log(this);
+  }
+
+  toIndex(){
+    this.updateIndex();
+    this.slide();
+    this.syncState();
+  }
+
+
+  updateIndex(){
+    if (this._index > this._boundary.max) {
+      this._index = this._boundary.max;
+    }
+
+    if (this._index < this._boundary.min) {
+      this._index = this._boundary.min;
+    }
   }
 
   render(){

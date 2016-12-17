@@ -81,6 +81,7 @@
     "react-dom": "^15.4.1",
     "react-measure": "^1.4.4",
     "react-swipe-views": "github:afeiship/react-swipe-views",
-    "react-swipeable": "github:afeiship/react-swipeable"
+    "react-swipeable": "github:afeiship/react-swipeable",
+    "react-swipeable-views": "github:afeiship/react-swipeable-views"
   }
 }
