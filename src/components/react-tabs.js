@@ -1,10 +1,11 @@
 import './style.scss';
+import {Children} from 'react';
 import classNames from 'classnames';
-import Swipeable from 'react-swipeable';
-import SwipeableViews from 'react-swipeable-views';
+import ReactSwipeable from 'react-swipeable';
+import ReactSwipeableViews from 'react-swipeable-views';
 
 
-export default class extends SwipeableViews{
+export default class extends ReactSwipeableViews{
 
   constructor(props){
   	super(props);
@@ -14,7 +15,6 @@ export default class extends SwipeableViews{
       min: 0,
       max: this._length - 1
     };
-    console.log(this);
   }
 
   toIndex(){
@@ -36,10 +36,10 @@ export default class extends SwipeableViews{
 
   render(){
     return (
-      <div className={classNames('react-tabs',this.props.cssClass)}>
+      <div className={classNames('react-tabs',this.props.className)}>
         <div className="hd">
           <ul className="react-tabs-menu">
-            {React.Children.map(this.props.children, (element, index) => {
+            {Children.map(this.props.children, (element, index) => {
               return (<li
                 style={{width:`${100/this._length}%`}}
                 key={index}
@@ -53,7 +53,7 @@ export default class extends SwipeableViews{
               left:`${100*this.state.activeIndex/this._length}%`
             }} className="bar"></div>
         </div>
-        <Swipeable
+        <ReactSwipeable
           className="bd"
           onSwipingLeft={this.onSwipingNext.bind(this)}
           onSwipingRight={this.onSwipingPrev.bind(this)}
@@ -71,7 +71,7 @@ export default class extends SwipeableViews{
                   transform:`translate(${this.state.translate},0)`,
                   WebkitTransform:`translate(${this.state.translate},0)`
                 }}>
-              {React.Children.map(this.props.children, (element, index) => {
+              {Children.map(this.props.children, (element, index) => {
                 return (
                   <div
                     key={index}
@@ -85,7 +85,7 @@ export default class extends SwipeableViews{
               })}
             </div>
           </div>
-        </Swipeable>
+        </ReactSwipeable>
       </div>
     );
   }
