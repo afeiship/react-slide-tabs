@@ -1,4 +1,4 @@
-#react-tabs
+# react-tabs
 > Tabs component for react.
 
 
@@ -9,12 +9,31 @@
 
 
 ## props:
-| name | type | value | description |
-| :----| :----| :----| :----|
-| visible  | Boolean | true/false | v-show |
-
+```js
+NONE
+```
 
 ## usage:
-```html
-<react-tabs :visible="true" />
+```jsx
+// import ReactTabs from 'react-tabs'
+
+class App extends React.Component{
+  render(){
+    return (
+      <div className="hello-react-tabs">
+        <ReactTabs>
+          <div className="bd" menu="red">
+            Read tab contet...
+          </div>
+          <div className="bd" menu="blue">
+            Blue tab contet...
+          </div>
+          <div className="bd" menu="yellow">
+            Yellow tab contet...
+          </div>
+        </ReactTabs>
+    </div>
+    );
+  }
+}
 ```
