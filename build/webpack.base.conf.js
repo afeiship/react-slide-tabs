@@ -12,8 +12,8 @@ var useCssSourceMap = cssSourceMapDev || cssSourceMapProd;
 var externals = process.env.NODE_ENV === 'production' ? {
   react: 'React',
   classnames: 'classNames',
-  'react-swipeable-views':'ReactSwipeableViews',
-  'react-swipeable':'ReactSwipeable'
+  'react-swipeable-views':'react-swipeable-views',
+  'react-swipeable':'react-swipeable'
 } : {};
 
 module.exports = {

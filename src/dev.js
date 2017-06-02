@@ -1,12 +1,12 @@
 import './dev.scss';
 
-import ReactTabs from './main';
+import ReactSlideTabs from './main';
 
-class App extends React.Component{
+class App extends React.PureComponent{
   render(){
     return (
-      <div className="hello-react-tabs">
-        <ReactTabs>
+      <div className="hello-react-slide-tabs">
+        <ReactSlideTabs>
           <div className="bd" menu="red">
             Read tab contet...
           </div>
@@ -16,7 +16,7 @@ class App extends React.Component{
           <div className="bd" menu="yellow">
             Yellow tab contet...
           </div>
-        </ReactTabs>
+        </ReactSlideTabs>
     </div>
     );
   }

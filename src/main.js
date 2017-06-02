@@ -1,2 +1,2 @@
-import ReactTabs from 'components/react-tabs';
-export default ReactTabs;
+import PureComponent from 'components/react-slide-tabs';
+export default PureComponent;
