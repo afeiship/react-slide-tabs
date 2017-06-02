@@ -9,8 +9,8 @@ base.entry = {
 base.output = {
   path: config.build.assetsRoot,
   publicPath: config.build.assetsPublicPath,
-  filename: 'react-slide-tabs.js',
-  library: 'ReactSlideTabs',
+  filename: 'react-swipe-tabs.js',
+  library: 'ReactSwipeTabs',
   libraryTarget: 'umd'
 }
 

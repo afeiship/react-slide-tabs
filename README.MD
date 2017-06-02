@@ -1,5 +1,5 @@
-# react-slide-tabs
-> Slide tabs component for react.
+# react-swipe-tabs
+> Swipe tabs component for react.
 
 
 ## props:
@@ -9,13 +9,13 @@ NONE
 
 ## usage:
 ```jsx
-// import ReactSlideTabs from 'react-slide-tabs'
+// import ReactSwipeTabs from 'react-swipe-tabs'
 
 class App extends React.Component{
   render(){
     return (
-      <div className="hello-react-slide-tabs">
-        <ReactSlideTabs>
+      <div className="hello-react-swipe-tabs">
+        <ReactSwipeTabs>
           <div className="bd" menu="red">
             Read tab contet...
           </div>
@@ -25,7 +25,7 @@ class App extends React.Component{
           <div className="bd" menu="yellow">
             Yellow tab contet...
           </div>
-        </ReactSlideTabs>
+        </ReactSwipeTabs>
     </div>
     );
   }

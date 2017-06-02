@@ -1,2 +1,2 @@
-import PureComponent from 'components/react-slide-tabs';
+import PureComponent from 'components/react-swipe-tabs';
 export default PureComponent;
